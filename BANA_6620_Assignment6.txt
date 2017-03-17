@@ -1,0 +1,42 @@
+# Assignment 6
+
+There will be nothing to turn in upon completing this assignment.  However, it will assure you have the basics of navigation within the terminal.  These are foundational commands, but there are many, many more commands.  This environment is incredibly useful, and it is foundational to becoming a software developer.
+
+1. Open the terminal (or git for Windows users) and navigate to your home directory (`cd ~` will take us to our home directory).
+cd ~
+
+2. Create a directory called `directory1`.
+mkdir directory1
+
+3. Navigate into `directory1`, and show (print) where you are to the command line.
+cd directory1
+pwd
+
+4. Create a `file1.md` and a `file2.md`.
+touch file1.md
+touch file2.md
+
+5. Show the contents of `directory1`.
+ls
+
+6. How would you go about changing the name of `file1.md` to `file3.md`?  How would this be different than creating a second version, but keeping `file1.md`?
+mv file1.md file3.md
+cp file1.md file3.md
+# The mv command renames the file so that all links to file1.md will need to be changed to file3.md in order to work. The cp command creates a copy of file1.md called file3.md and does not delete file1.md.
+
+7. Within `directory1`, create `directory2`.  Again, show all the contents.
+mkdir directory2
+ls
+
+8. In one command, move all of the files from `directory1` into
+`directory2`.  **Hint:** Think SQL here!
+mv file2.md file3.md directory2
+
+9. In one command, delete `directory2` and all its contents.
+rm -rf directory2
+
+10. Individually remove all the contents in `directory1`.  Navigate up a directory, and delete `directory1`.  Why is it the case that we can use a different command do this than what we did in the previous question?
+rm file1.md
+rm file2.md
+rmdir directory1
+#We cannot use the rmdir command unless the directory we are trying to remove is empty.
